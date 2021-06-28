@@ -1,0 +1,14 @@
+@import '../../core/theme.scss';
+
+body {
+    background-color: $primary-black;
+    background-image: $fabric-texture;
+    background-blend-mode: multiply;
+}
+
+#background {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}

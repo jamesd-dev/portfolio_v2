@@ -1,5 +1,9 @@
 @import './core/theme.scss';
 
+body {
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     font-family: $default-font;
