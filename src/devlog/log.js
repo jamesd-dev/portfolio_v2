@@ -14,11 +14,15 @@ const newLog = {
     tags
 };
 
+const backupLogJson = JSON.stringify(log);
 log.push(newLog);
-
 const logJson = JSON.stringify(log);
 
 let fs = require('fs');
+fs.writeFile("./src/devlog/devlogBackup.json", backupLogJson, function(err, result) {
+    if(err) console.log('failed to create backup');
+    else console.log('successfully created backup');
+});
 fs.writeFile("./src/devlog/devlog.json", logJson, function(err, result) {
     if(err) console.log('failed to create log');
     else console.log('successfully created log');
